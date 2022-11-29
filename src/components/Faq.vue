@@ -1,5 +1,5 @@
 <template>
-    <div class="w-1/3 mx-auto pb-10 pt-10 clear-both">
+    <div class="sm:w-full sm:px-2 md:w-1/3 mx-auto md:pb-10 md:pt-10 clear-both">
         <dl v-for="item in items" class="mb-4">
             <dt v-on:click="item.open = !item.open" class="bg-blue-300 py-4 mx-auto text-center rounded-md">{{item.title}}
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline float-right mr-4">
