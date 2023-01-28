@@ -5,7 +5,7 @@
       <p class="text-white text-xl text-center">Feb 27, 2023 ~  7:00 pm</p>
       <p class="text-white text-xl text-center">50 E North Street</p>
       <br>
-      <p class="text-white text-xl text-center">Without more participation, this service may not be able to continue</p>
+      <p class="text-white text-sm text-center pb-6 px-4 md:text-xl">Without more participation, this service may not be able to continue</p>
     </div> 
 
     <div class="flex justify-end">
