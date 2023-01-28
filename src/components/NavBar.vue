@@ -1,5 +1,5 @@
 <template>
-  <div class=" bg-white sticky top-0 w-full">
+  <div class=" bg-white top-0 w-full">
     <div >
         <h1 class="text-center font-lobster text-3xl" >Volunteer Ambulance Service, Inc.</h1>
         <h1 class="text-center font-righteous">Rossville, IN</h1>
@@ -15,7 +15,7 @@
             height="100"
           />
         </div>
-        <div>
+        <!-- <div>
           <a
             href="#"
             class="block md:inline-block text-white text-xl hover:bg-red-500 px-3 py-3 border-r-2 border-gray-400"
@@ -36,7 +36,7 @@
             class="block md:inline-block text-white text-xl hover:bg-red-500 px-3 py-3"
             >Contact</a
           >
-        </div>
+        </div>-->
       </div>
   </div>
 </template>

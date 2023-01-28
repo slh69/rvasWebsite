@@ -1,10 +1,11 @@
 <template>
-  <div class="pb-10">
+  <div class="pb-10 h-screen">
     <NavBar />
     <Hero  />
     <Faq />
     <History />
     <Contact />
+    <Footer />
   </div>  
 
 </template>
@@ -17,5 +18,6 @@ import Hero from './components/Hero.vue'
 import History from './components/History.vue'
 import Faq from './components/Faq.vue'
 import Contact from './components/Contact.vue'
+import Footer from './components/Footer.vue'
 
 </script>

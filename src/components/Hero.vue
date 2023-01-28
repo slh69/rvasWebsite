@@ -4,6 +4,8 @@
       <h1 class="mt-4 text-3xl text-white text-center">Annual Meeting</h1>
       <p class="text-white text-xl text-center">Feb 27, 2023 ~  7:00 pm</p>
       <p class="text-white text-xl text-center">50 E North Street</p>
+      <br>
+      <p class="text-white text-xl text-center">Without more participation, this service may not be able to continue</p>
     </div> 
 
     <div class="flex justify-end">
@@ -13,15 +15,4 @@
   </div>
 </template>
 
-<script setup>
-import { ref } from "vue";
 
-const announcements = ref(
-  {
-    title: "Annual Meeting",
-    date: "Thursday, Dec 8, 2022",
-    details:
-      "Come support your ambulance service volunteer.  Find out what is going on in your community.",
-  },
-);
-</script>
