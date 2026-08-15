@@ -21,11 +21,10 @@
     </p>
     <p class="pb-10 px-8">
       V.A.S. strives to serve the Rossville community 24 hours a day, 365 days a year. 
-      We encourage you to contact any EMT to learn how you to can help provide
-      emergency care for your friends, family, and neighbors. Anyone wishing to
-      learn more on how to be a part of the V.A.S., can contact our business
-      number at 765-379-2998 and leave a message. We need help very
-      badly. Our goal is to try and have the best up to date equipment and to
+      We encourage anyone interested in helping provide emergency care for
+      friends, family, and neighbors to email
+      <a class="text-blue-800 underline hover:text-red-600" href="mailto:rvassec@gmail.com">rvassec@gmail.com</a>.
+      Volunteers are urgently needed. Our goal is to have the best up-to-date equipment and to
       have a response time of less than 10 minutes to all parts of our response
       area at all times.
     </p>

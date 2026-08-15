@@ -37,7 +37,7 @@ const items = ref([
     },
     {
      title: 'How is Rossville Ambulance Funded?',
-     content: 'V.A.S. receives a stipend from Clinton County each time they are called as long as the ambulace leaves the garage, donations, lease monies for use of the Bennett Room & part of the ambulance garage, and memorial contributions. V.A.S. purchases ambulances, radios, training costs, and building maintenance & upkeep from these funds. All of the EMT’s, First Responders, and drivers are volunteers and receive no compensation for the many hours they devote to the V.A.S.', 
+     content: 'The county provides the ambulance, fuel, truck maintenance, and some training. V.A.S. remains responsible for the cost of EMT and EMR classes, some training, building & grounds maintenance & repair, and some supplies. Donations and memorial contributions help cover these expenses. All EMTs, EMRs, and drivers are volunteers.',
      open: false
     }
      ])

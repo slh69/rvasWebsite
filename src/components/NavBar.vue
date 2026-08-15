@@ -1,42 +1,28 @@
 <template>
-  <div class=" bg-white top-0 w-full">
-    <div >
+  <header class="bg-white top-0 w-full">
+    <div class="px-4 py-4">
         <h1 class="text-center font-lobster text-3xl" >Volunteer Ambulance Service, Inc.</h1>
         <h1 class="text-center font-righteous">Rossville, IN</h1>
         <h1 class="text-center font-righteous text-2xl" >Est. Jan 7, 1974</h1>
       </div>
       <div
-        class=" bg-blue-800 flex items-center gap-10 h-20 mt-4 isolate"
+        class="bg-blue-800 flex items-center justify-between gap-4 min-h-[5rem] px-5 md:px-20 isolate"
       >
-        <div class="pl-20">
+        <a href="/" aria-label="Rossville Volunteer Ambulance Service home">
           <img
             src="../assets/star-of-life-png-27565.png"
-            width="100"
-            height="100"
+            class="h-20 w-20 object-contain"
+            alt="Star of Life"
           />
-        </div>
-        <!-- <div>
+        </a>
+        <nav class="flex items-center gap-2" aria-label="Main navigation">
+          <a href="/" class="text-white font-semibold hover:underline px-3 py-3">Home</a>
           <a
-            href="#"
-            class="block md:inline-block text-white text-xl hover:bg-red-500 px-3 py-3 border-r-2 border-gray-400"
-            >Home</a
+            href="/donate.html"
+            class="rounded-md bg-red-600 px-5 py-3 font-bold text-white shadow-md transition hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-800"
+            >Donate</a
           >
-          <a
-            href="#"
-            class="block md:inline-block text-white text-xl hover:bg-red-500 px-3 py-3 border-r-2 border-gray-400"
-            >About</a
-          >
-          <a
-            href="#"
-            class="block md:inline-block text-white text-xl hover:bg-red-500 px-3 py-3 border-r-2 border-gray-400"
-            >Volunteer</a
-          >
-          <a
-            href="#"
-            class="block md:inline-block text-white text-xl hover:bg-red-500 px-3 py-3"
-            >Contact</a
-          >
-        </div>-->
+        </nav>
       </div>
-  </div>
+  </header>
 </template>
