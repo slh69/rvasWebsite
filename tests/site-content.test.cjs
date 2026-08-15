@@ -47,3 +47,7 @@ test('funding FAQ reflects current county and V.A.S. responsibilities', () => {
   assert.match(faq, /All EMTs, EMRs, and drivers are volunteers/)
   assert.doesNotMatch(faq, /stipend|ambulace|purchases ambulances/)
 })
+
+test('Netlify uses a Node version supported by Vite', () => {
+  assert.equal(read('.nvmrc').trim(), '22.12.0')
+})
