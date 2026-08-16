@@ -17,7 +17,9 @@ const stripeLinks = {
       <div class="mt-10 grid gap-6 text-left md:grid-cols-2">
         <article class="rounded-xl border-t-4 border-red-600 bg-white p-7 text-gray-900 shadow-xl">
           <h2 class="text-center text-2xl font-bold text-blue-900">Make a one-time gift</h2>
-          <p class="mt-2 text-gray-600 md:min-h-[3rem]">Choose the amount of your secure donation.</p>
+          <p class="mt-2 text-gray-600 md:min-h-[3rem]">
+            Choose the amount of your secure <strong class="font-semibold text-blue-900">one-time</strong> donation.
+          </p>
           <a v-if="stripeLinks.oneTime" :href="stripeLinks.oneTime" class="mx-auto mt-6 block max-w-xs">
             <img class="w-full rounded-xl" src="/donation-qr.png" alt="Scan to make a one-time donation with Stripe" />
           </a>
@@ -33,7 +35,9 @@ const stripeLinks = {
 
         <article class="rounded-xl border-t-4 border-red-600 bg-white p-7 text-gray-900 shadow-xl">
           <h2 class="text-center text-2xl font-bold text-blue-900">Give Monthly</h2>
-          <p class="mt-2 text-gray-600 md:min-h-[3rem]">Choose the amount of your secure monthly donation.</p>
+          <p class="mt-2 text-gray-600 md:min-h-[3rem]">
+            Choose the amount of your secure <strong class="font-semibold text-blue-900">monthly</strong> donation.
+          </p>
           <a :href="stripeLinks.monthly" class="mx-auto mt-6 block max-w-xs">
             <img class="w-full rounded-xl" src="/monthly-donation-qr.png" alt="Scan to make a monthly donation with Stripe" />
           </a>
