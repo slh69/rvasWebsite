@@ -34,6 +34,7 @@ test('navigation and donation page offer each requested giving option', () => {
   assert.doesNotMatch(donate, /secure donation on Stripe/)
   assert.match(donate, /text-center text-2xl font-bold text-blue-900">Make a one-time gift/)
   assert.match(donate, /text-center text-2xl font-bold text-blue-900">Give Monthly/)
+  assert.equal((donate.match(/md:min-h-\[3rem\]/g) || []).length, 2)
   assert.match(donate, /https:\/\/donate\.stripe\.com\/8x2fZi0ws8QQ6CM1wX67S01/)
   assert.match(donate, /\/donation-qr\.png/)
   assert.match(donate, /https:\/\/donate\.stripe\.com\/dRmcN6frm1oobX62B167S03/)
