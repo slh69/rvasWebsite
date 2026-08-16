@@ -36,7 +36,10 @@ test('navigation and donation page offer each requested giving option', () => {
   assert.match(donate, /text-center text-2xl font-bold text-blue-900">Give Monthly/)
   assert.match(donate, /https:\/\/donate\.stripe\.com\/8x2fZi0ws8QQ6CM1wX67S01/)
   assert.match(donate, /\/donation-qr\.png/)
-  assert.match(donate, /\[10, 25, 50, 75, 100\]/)
+  assert.match(donate, /https:\/\/donate\.stripe\.com\/dRmcN6frm1oobX62B167S03/)
+  assert.match(donate, /\/monthly-donation-qr\.png/)
+  assert.match(donate, /Choose your monthly amount/)
+  assert.doesNotMatch(donate, /monthlyGifts|Monthly Stripe links coming soon/)
   assert.match(read('src/donate.js'), /render: \(\) => h/)
 })
 

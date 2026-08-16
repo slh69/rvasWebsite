@@ -1,10 +1,7 @@
 <script setup>
-const monthlyGifts = [10, 25, 50, 75, 100]
-
-// Add the Stripe Payment Link URLs here once they have been created in Stripe.
 const stripeLinks = {
   oneTime: 'https://donate.stripe.com/8x2fZi0ws8QQ6CM1wX67S01',
-  monthly: {}
+  monthly: 'https://donate.stripe.com/dRmcN6frm1oobX62B167S03'
 }
 </script>
 
@@ -36,20 +33,14 @@ const stripeLinks = {
 
         <article class="rounded-xl border-t-4 border-red-600 bg-white p-7 text-gray-900 shadow-xl">
           <h2 class="text-center text-2xl font-bold text-blue-900">Give Monthly</h2>
-          <p class="mt-2 text-gray-600">A recurring gift provides dependable support all year.</p>
-          <div class="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3">
-            <template v-for="amount in monthlyGifts" :key="amount">
-              <a
-                v-if="stripeLinks.monthly[amount]"
-                :href="stripeLinks.monthly[amount]"
-                class="rounded-md bg-blue-800 px-4 py-3 text-center font-bold text-white hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-blue-800 focus:ring-offset-2"
-              >${{ amount }}</a>
-              <button v-else class="cursor-not-allowed rounded-md bg-blue-100 px-4 py-3 font-bold text-blue-800" disabled>
-                ${{ amount }}
-              </button>
-            </template>
-          </div>
-          <p v-if="!Object.keys(stripeLinks.monthly).length" class="mt-4 text-sm text-gray-500">Monthly Stripe links coming soon.</p>
+          <p class="mt-2 text-gray-600">Choose the amount of your secure monthly donation.</p>
+          <a :href="stripeLinks.monthly" class="mx-auto mt-6 block max-w-xs">
+            <img class="w-full rounded-xl" src="/monthly-donation-qr.png" alt="Scan to make a monthly donation with Stripe" />
+          </a>
+          <a
+            :href="stripeLinks.monthly"
+            class="mt-6 block rounded-md bg-blue-800 px-5 py-3 text-center font-bold text-white hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-blue-800 focus:ring-offset-2"
+          >Choose your monthly amount</a>
         </article>
       </div>
 
