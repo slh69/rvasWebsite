@@ -1,6 +1,6 @@
 <template>
   <div class="clear-both border-t-4 border-red-600 w-3/4 mx-auto mb-10">
-    <h1 class="font-lobster text-3xl pl-8 pt-4">History</h1>
+    <h2 class="font-lobster text-3xl pl-8 pt-4">History of Rossville Volunteer Ambulance Service</h2>
     <p class="px-8 pb-3">
       In 1973, residents of the Rossville community started discussions leading
       to the organization of the Volunteer Ambulance Service.  The service

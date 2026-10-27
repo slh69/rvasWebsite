@@ -1,10 +1,12 @@
 <template>
   <div class="pb-10 h-screen">
     <NavBar />
-    <Hero  />
-    <Faq />
-    <History />
-    <Contact />
+    <main>
+      <Hero />
+      <Faq />
+      <History />
+      <Contact />
+    </main>
     <Footer />
   </div>  
 

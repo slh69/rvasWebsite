@@ -1,9 +1,9 @@
 <template>
   <header class="bg-white top-0 w-full">
     <div class="px-4 py-4">
-        <h1 class="text-center font-lobster text-3xl" >Volunteer Ambulance Service, Inc.</h1>
-        <h1 class="text-center font-righteous">Rossville, IN</h1>
-        <h1 class="text-center font-righteous text-2xl" >Est. Jan 7, 1974</h1>
+        <p class="text-center font-lobster text-3xl" >Volunteer Ambulance Service, Inc.</p>
+        <p class="text-center font-righteous">Rossville, IN</p>
+        <p class="text-center font-righteous text-2xl" >Est. Jan 7, 1974</p>
       </div>
       <div
         class="bg-blue-800 flex items-center justify-between gap-4 min-h-[5rem] px-5 md:px-20 isolate"
@@ -12,6 +12,8 @@
           <img
             src="../assets/star-of-life-png-27565.png"
             class="h-20 w-20 object-contain"
+            width="800"
+            height="800"
             alt="Star of Life"
           />
         </a>

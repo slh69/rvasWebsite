@@ -1,9 +1,5 @@
-import { createApp, h } from 'vue'
-import NavBar from './components/NavBar.vue'
-import Donate from './components/Donate.vue'
-import Footer from './components/Footer.vue'
+import { createApp } from 'vue'
+import DonateApp from './donate-app.js'
 import './index.css'
 
-createApp({
-  render: () => h('div', [h(NavBar), h(Donate), h(Footer)])
-}).mount('#app')
+createApp(DonateApp).mount('#app')

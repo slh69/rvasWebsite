@@ -1,7 +1,11 @@
-# Vue 3 + Vite
+# Rossville Volunteer Ambulance Service
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+The RVAS homepage and donation page use Vue 3 and Vite. Use Node 22.12.0 or a newer version supported by Vite.
 
-## Recommended IDE Setup
+Run `npm ci`, then `npm run dev` for local development.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+Run `npm run build` to generate `dist/` for static hosting. The build renders both pages from the same Vue components used in the browser, so their content and FAQ answers are available without JavaScript. `dist-ssr/` is an intermediate build directory and does not need to be deployed. Rebuild when changing content; dated announcements and the footer year reflect the build date until JavaScript runs.
+
+Run `npm test` to build and check page content, metadata, heading structure, donation links, and asset references in the generated HTML. Run `npm run preview` to inspect the production build locally.
+
+Search titles, descriptions, social preview metadata, and organization structured data are in `index.html` and `donate.html`. Keep the structured address and email consistent with the visible contact information. Canonical URLs use `https://rossvilleambulance.com/`. When adding pages, update `public/sitemap.xml` to include their canonical URLs; `public/robots.txt` advertises that sitemap. Both files are copied into `dist/` during the build.

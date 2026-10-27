@@ -43,7 +43,8 @@ test('navigation and donation page offer each requested giving option', () => {
   assert.match(donate, /\/monthly-donation-qr\.png/)
   assert.match(donate, /Choose your monthly amount/)
   assert.doesNotMatch(donate, /monthlyGifts|Monthly Stripe links coming soon/)
-  assert.match(read('src/donate.js'), /render: \(\) => h/)
+  assert.match(read('src/donate-app.js'), /render: \(\) => h/)
+  assert.match(read('src/donate.js'), /createApp\(DonateApp\)\.mount\('#app'\)/)
 })
 
 test('funding FAQ reflects current county and V.A.S. responsibilities', () => {
@@ -56,4 +57,48 @@ test('funding FAQ reflects current county and V.A.S. responsibilities', () => {
 
 test('Netlify uses a Node version supported by Vite', () => {
   assert.equal(read('.nvmrc').trim(), '22.12.0')
+})
+
+test('pages describe their organization, location, and purpose to search engines and social previews', () => {
+  const titles = new Set()
+  const descriptions = new Set()
+  for (const page of ['index.html', 'donate.html']) {
+    const html = read(page)
+    const title = html.match(/<title>([^<]+)<\/title>/)[1]
+    const description = html.match(/<meta name="description" content="([^"]+)"/)[1]
+    assert.match(title, /Rossville Volunteer Ambulance Service/)
+    assert.match(description, /Rossville, Indiana/)
+    assert.match(html, /<meta property="og:type" content="website"/)
+    assert.ok(html.includes(`<meta property="og:title" content="${title}"`))
+    assert.match(html, /<meta property="og:description" content="[^"]+"/)
+    assert.match(html, /<meta name="twitter:card" content="summary"/)
+    assert.ok(html.includes(`<meta name="twitter:title" content="${title}"`))
+    titles.add(title)
+    descriptions.add(description)
+  }
+  assert.equal(titles.size, 2)
+  assert.equal(descriptions.size, 2)
+  const organization = JSON.parse(read('index.html').match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])
+  assert.equal(organization['@type'], 'Organization')
+  assert.equal(organization.name, 'Rossville Volunteer Ambulance Service')
+  assert.equal(organization.email, 'rvassec@gmail.com')
+  assert.equal(organization.address.streetAddress, '50 E North Street')
+  assert.equal(organization.address.addressLocality, 'Rossville')
+  assert.equal(organization.address.addressRegion, 'IN')
+  assert.equal(organization.address.postalCode, '46065')
+})
+
+test('each page has one descriptive primary heading and FAQs keep their answers in the markup', () => {
+  assert.doesNotMatch(read('src/components/NavBar.vue'), /<h1\b/)
+  assert.match(read('src/components/Hero.vue'), /<h1[^>]*>Rossville Volunteer Ambulance Service<\/h1>/)
+  for (const component of ['History', 'Contact', 'Faq']) {
+    assert.doesNotMatch(read(`src/components/${component}.vue`), /<h1\b/)
+    assert.match(read(`src/components/${component}.vue`), /<h2\b/)
+  }
+  assert.match(read('src/App.vue'), /<main>[\s\S]*<Hero\s*\/>[\s\S]*<Faq\s*\/>[\s\S]*<History\s*\/>[\s\S]*<Contact\s*\/>[\s\S]*<\/main>/)
+  assert.match(read('src/components/Donate.vue'), /<h1[^>]*>Donate to Rossville Volunteer Ambulance Service<\/h1>/)
+  const faq = read('src/components/Faq.vue')
+  assert.match(faq, /<details\b[\s\S]*<summary\b[\s\S]*item\.title[\s\S]*<\/summary>[\s\S]*item\.content[\s\S]*<\/details>/)
+  assert.doesNotMatch(faq, /v-if|v-show/)
+  assert.match(read('src/components/Hero.vue'), /width="740" height="220" fetchpriority="high"/)
 })

@@ -1,7 +1,7 @@
 <template>
   <section class="mx-auto grid w-3/4 gap-8 py-10 md:grid-cols-2" aria-labelledby="contact-heading">
     <div class="text-center">
-      <h1 id="contact-heading" class="text-2xl font-bold underline">Contact Us</h1>
+      <h2 id="contact-heading" class="text-2xl font-bold underline">Contact RVAS in Rossville, Indiana</h2>
       <address class="mt-5 not-italic text-xl">
         <p>50 E North Street, Rossville, IN 46065</p>
         <a class="text-blue-800 underline hover:text-red-600" href="mailto:rvassec@gmail.com">rvassec@gmail.com</a>

@@ -9,7 +9,8 @@ const stripeLinks = {
   <main class="bg-blue-800 px-4 py-12 md:py-16">
     <section class="mx-auto max-w-4xl text-center text-white">
       <p class="font-righteous text-sm uppercase tracking-[0.2em] text-blue-200">Support RVAS</p>
-      <h1 class="mt-3 font-lobster text-4xl md:text-5xl">Help us answer the next call</h1>
+      <h1 class="mt-3 font-lobster text-4xl md:text-5xl">Donate to Rossville Volunteer Ambulance Service</h1>
+      <p class="mt-4 text-xl text-blue-100">Help us answer the next call in Rossville, Indiana.</p>
       <p class="mx-auto mt-4 max-w-2xl text-lg text-blue-100">
         Donations go toward equipment, training, and general upkeep of the squad headquarters
       </p>
